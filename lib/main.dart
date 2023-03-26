@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'theme.dart';
+import 'package:shoequ/home/main_page.dart';
+import 'package:shoequ/pages/sign_in_page.dart';
+import 'package:shoequ/pages/sign_up_page.dart';
+import 'pages/splash_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,20 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-          child: Text(
-        'Halo semuanya!',
-        style: priceTextStyle.copyWith(fontSize: 30),
-      )),
+      routes: {
+        '/': (context) => SplashPage(),
+        '/sign-in': (context) => SignInPage(),
+        '/sign-up': (context) => SignUpPage(),
+        '/home': (context) => MainPage(),
+      },
     );
   }
 }
