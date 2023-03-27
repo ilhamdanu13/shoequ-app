@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shoequ/theme.dart';
 
-import '../widgets/product._tile.dart';
-import '../widgets/product_card.dart';
+import '../../widgets/product._tile.dart';
+import '../../widgets/product_card.dart';
 
 class HomePage extends StatelessWidget {
   @override

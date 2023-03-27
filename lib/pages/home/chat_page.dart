@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shoequ/theme.dart';
 
+import '../../widgets/chat_tile.dart';
+
 class ChatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class ChatPage extends StatelessWidget {
       );
     }
 
-    Widget content() {
+    Widget emptyChat() {
       return Expanded(
         child: Container(
           color: backgroundColor3,
@@ -81,6 +83,22 @@ class ChatPage extends StatelessWidget {
           ),
         ),
       );
+    }
+
+    Widget content() {
+      return Expanded(
+          child: Container(
+        width: double.infinity,
+        color: backgroundColor3,
+        child: ListView(
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+          ),
+          children: [
+            ChatTile(),
+          ],
+        ),
+      ));
     }
 
     return Column(
